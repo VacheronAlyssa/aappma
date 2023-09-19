@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <title>Accueil - Association de Pêche</title>
+
+    
+    
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="photos/logbroche.png" alt="Logo 1"><div id="slideshow">
+
+            </div>
+         <h1 id="appma-name">AAPPMA "Le Brochet de Basse et Vilaine"</h1>
+            <img src="photos/logofede56.jpg" alt="Logo 2">
+        </div>
+        
+    </div>
+    <!-- Inclure le fichier de navigation -->
+    <div id="navigation-container"></div>
+
+    </header>
+
+    <section id="alevinage">
+        <h2>Alevinage</h2>
+        <p>Chaque année, notre association procède à des opérations d'alevinage pour enrichir nos plans d'eau et contribuer à la préservation des espèces.</p>
+
+        <h3>Opérations d'alevinage récentes</h3>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Site</th>
+                <th>Quantité</th>
+                <th>Espèce</th>
+            </tr>
+            <tr>
+                <td>10/05/2023</td>
+                <td>Lac de la Forêt</td>
+                <td>500</td>
+                <td>Truites arc-en-ciel</td>
+            </tr>
+            <tr>
+                <td>15/06/2023</td>
+                <td>Étang du Rodoir</td>
+                <td>300</td>
+                <td>Brochets</td>
+            </tr>
+            <!-- Ajoutez d'autres lignes pour d'autres opérations d'alevinage -->
+        </table>
+
+        <h3>Photos des opérations d'alevinage</h3>
+        <div class="photo-gallery">
+            <div class="photo">
+                <img src="photos/30.jfif" alt="Alevinage 1">
+                <p>Description de l'alevinage 1.</p>
+            </div>
+            <div class="photo">
+                <img src="photos/Alev-1recti-WE0aba776a3e.jpg" alt="Alevinage 2">
+                <p>Description de l'alevinage 2.</p>
+            </div>
+            <!-- Ajoutez d'autres photos avec des descriptions -->
+        </div>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+       $(document).ready(function() {
+           $("#navigation-container").load("navigation.html");
+       });
+   </script>
+   <!-- Charger le contenu du fichier de pied de page -->
+   <script>
+       $(document).ready(function() {
+           $("#footer-container").load("footer.html");
+       });
+   </script>
+</body>
+</html>

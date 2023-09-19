@@ -1,0 +1,215 @@
+/* Styles pour la pêche sportive */
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #154360, #1e8449); /* Dégradé du bleu au vert */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #154360;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* Styles pour les icônes de réseaux sociaux dans le footer */
+.social-icon {
+    width: 24px; /* Largeur souhaitée */
+    height: 24px; /* Hauteur souhaitée */
+}
+
+/* Styles pour le menu déroulant */
+
+/* Styles pour la barre de navigation principale */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Style pour souligner l'élément au survol */
+nav p:hover {
+    text-decoration: underline; /* Ajoute un soulignement au texte au survol */
+    cursor: pointer; /* Curseur de la souris en main pour indiquer qu'il est cliquable */
+}
+
+
+
+nav a {
+    color: white; /* Couleur de texte blanche */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600; /* Couleur de texte orange au survol */
+}
+
+/* Styles pour les sous-menus déroulants */
+/* Styles pour le menu déroulant */
+
+/* ... (styles précédents) ... */
+
+/* Styles pour les sous-menus déroulants */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #154360;
+    border-top: 2px solid #ff6600; /* Ligne séparatrice */
+    border-radius: 0 0 5px 5px;
+    padding: 10px; /* Ajout de padding pour séparer les liens */
+    min-width: 150px; /* Largeur minimale des sous-menus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover > ul {
+    display: block; /* Afficher le sous-menu au survol */
+}
+
+nav ul ul li {
+    margin-right: 0; /* Réinitialiser la marge droite pour les éléments du sous-menu */
+}
+
+nav ul ul a {
+    color: white; /* Couleur de texte blanche pour le sous-menu */
+    text-decoration: none;
+    display: block; /* Les liens sont des blocs pour la séparation */
+    padding: 5px 0; /* Espacement entre les liens */
+    transition: background-color 0.3s;
+}
+
+
+/* Styles généraux (pour tous les écrans) */
+/* ... (styles précédents) ... */
+
+/* Media query pour les écrans de petite taille (par exemple, les smartphones) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Afficher les éléments en colonne */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    nav li {
+        margin: 10px 0; /* Espacement entre les éléments */
+    }
+
+    /* Styles pour les sous-menus déroulants */
+    nav ul ul {
+        position: static; /* Ne pas positionner en absolu */
+        display: none;
+    }
+
+    nav ul li:hover > ul {
+        display: block; /* Afficher le sous-menu au survol */
+    }
+
+    /* Autres styles pour les petits écrans */
+}
+
+nav ul ul a:hover {
+    color: #ff6600; /* Couleur de texte orange pour le sous-menu au survol */
+}
+
+
+/* Styles pour les sections */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #154360;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styles pour les liens */
+a {
+    color: white;;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+/* Styles pour le footer */
+footer {
+    background-color: #154360;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.cadre {
+    border: 2px solid #C0C0C0; /* Couleur de la bordure argentée */
+    padding: 10px; /* Espacement à l'intérieur du cadre */
+    background-color: #F5F5F5; /* Couleur de fond argentée */
+    width: 300px; /* Largeur du cadre (ajustez selon vos besoins) */
+    margin: 0 auto; /* Centre le cadre horizontalement sur la page */
+    font-family: 'Georgia', serif; /* Police de caractères avec une touche chic */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Styles pour les noms de poissons */
+.poisson {
+    color: #4CAF50; /* Couleur verte pour les noms de poissons */
+    font-weight: bold; /* Texte en gras pour les noms de poissons */
+    font-style: italic; /* Texte en italique pour les noms de poissons */
+    margin: 5px 0; /* Marge supérieure et inférieure pour les noms de poissons */
+}
+
+/* Styles pour les lignes de séparation */
+.ligne-separation {
+    border-top: 2px solid #C0C0C0; /* Ligne de séparation argentée */
+    margin: 10px 0; /* Marge supérieure et inférieure de la ligne */
+}
+/* Styles spécifiques à la pêche sportive */
+#logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#logo-container img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#actualites-container {
+    margin-top: 20px;
+}
+
+/* Style pour les images de pêche sportive */
+.fishing-image {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #154360;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#manifestations {
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 20px; /* Ajoute un espacement intérieur à la section */
+}
+
+#manifestations img {
+    max-width: 100%; /* Empêche l'image de dépasser la largeur de la section */
+    height: auto; /* Maintient le rapport hauteur/largeur de l'image */
+    display: block; /* Supprime les marges automatiques autour de l'image */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    width: 50%; /* Définir la largeur de l'image à 50% (vous pouvez ajuster cette valeur) */
+}
