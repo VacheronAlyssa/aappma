@@ -7,6 +7,11 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Styles pour les titres des actualités */
+h2 {
+    text-align: center; /* Centrer le texte */
+}
+
 
 header {
     background-color: #154360;
@@ -33,7 +38,9 @@ nav li {
     margin-right: 20px;
     position: relative;
 }
-
+p{
+    text-align: center;
+}
 /* Style pour souligner l'élément au survol */
 nav p:hover {
     text-decoration: underline; /* Ajoute un soulignement au texte au survol */

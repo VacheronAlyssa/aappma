@@ -70,15 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Modifier une Actualité</h1>
     <p>Bienvenue, <?php echo $_SESSION['username']; ?> | <a href="logout.php">Déconnexion</a></p>
     
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <label for="titre">Titre :</label>
-        <input type="text" id="titre" name="titre" value="<?php echo $titre; ?>" required><br><br>
-        
-        <label for="contenu">Contenu :</label><br>
-        <textarea id="contenu" name="contenu" rows="4" required><?php echo $contenu; ?></textarea><br><br>
-        
-        <input type="submit" value="Modifier">
+        <input type="text" id="titre" name="titre" required><br><br>
+        <label for="contenu">Contenu :</label>
+        <textarea id="contenu" name="contenu" required></textarea><br><br>
+        <label for="image">Image :</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        <input type="submit" value="Ajouter Actualité">
     </form>
+
     
     <?php if (!empty($error_message)) : ?>
         <p style="color: red;"><?php echo $error_message; ?></p>

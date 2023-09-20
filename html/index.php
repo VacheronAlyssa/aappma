@@ -12,13 +12,31 @@ function displayLoginButton() {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <title>Accueil - Association de Pêche</title>
+
+    
+    
 </head>
-<body>
-    <h1>Page d'Accueil</h1>
 <header>
+        
+        <div id="logo-container">
+            <img src="../photos/logbroche.png" alt="Logo 1"><div id="slideshow">
+
+            </div>
+            <h1 id="appma-name">AAPPMA Brochet de basse et vilaine</h1>
+            <img src="../photos/logofede56.jpg" alt="Logo 2">
+        </div>
+
+        <div id="navigation-container"></div>
+
     <?php
     // Afficher le bouton de connexion pour l'administrateur
     if (!$admin_connected) {
@@ -42,8 +60,13 @@ try {
     exit();
 }
 
-// Requête SQL pour récupérer les actualités
-$sql = "SELECT * FROM actualites ORDER BY date DESC";
+// Requête SQL pour récupérer les actualités (triées par date décroissante)
+// Requête SQL pour récupérer les actualités (triées par date croissante)
+$sql = "SELECT * FROM actualites ORDER BY date ASC";
+$result = $pdo->query($sql);
+
+// Récupérer les données de l'actualité (y compris le nom du fichier image)
+$sql = "SELECT * FROM actualites ORDER BY date ASC";
 $result = $pdo->query($sql);
 
 if (!$result) {
@@ -54,9 +77,16 @@ if (!$result) {
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo "<h2>" . htmlspecialchars($row['titre']) . "</h2>";
     echo "<p>" . htmlspecialchars($row['contenu']) . "</p>";
+
+    // Afficher l'image (chemin de l'image à adapter)
+    $image_path = 'images/' . $row['nom_image'];
+    echo '<img src="' . $image_path . '" alt="Image d\'actualité">';
+
     echo "<p>Date : " . htmlspecialchars($row['date']) . "</p>";
     echo "<hr>"; // Ligne de séparation entre les actualités
 }
+
+
 
 // Fermeture de la connexion à la base de données
 $pdo = null;
